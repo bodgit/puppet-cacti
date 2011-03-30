@@ -1,0 +1,14 @@
+Rudimentary support for managing Cacti with Puppet. It pokes the database
+directly as while the Cacti CLI scripts are probably sufficient for adding new
+hosts/graphs/... they don't have any support for changing or removing them.
+
+Currently only hosts/devices are managed right now. A minimum TODO list would
+be also managing graphs created for each host and making them visible in the
+graph trees. Creating graph templates is probably the lowest priority purely
+because the resource type is likely to be so hideously complex.
+
+The database code is a bit of a mess and the whole thing has been written
+mostly by trial and error but it seems to work for my handful of devices.
+
+This has been tested only on CentOS 5.x with the cacti package from the EPEL
+repository which is currently 0.8.7f.
